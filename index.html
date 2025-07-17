@@ -4,15 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <footer class="bg-[#659f8f] dark:bg-[#313131]">
         <div class="container px-6 py-12 mx-auto">
-            <div class="flex">
+           
+                <!--NEWS LETTER-->
+                <div class="footer-container">
+                    <div class="footer-news">
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <form>
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    </div>
+                </div>
+                <!--QUICK LINKS COLUMN-->
+                <div class="footer-links">
+                    <ul>
+                    <h4>Quick Link</h4>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">Our Philosophy</a></li>
+                    </ul>
+                </div>
+                <!--TECHNOLOGIES-->
+                <div class="footer-tech">
+                    <ul>
+                    <h4>Technologies</h4>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="footer-logo">
                 <a href="#">
                     <img class="w-auto h-7" src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="CodeSpace Logo">
                 </a>
-            </div>
+                </div> 
+        </div>
         </div>
     </footer>
 </body>
