@@ -17,7 +17,7 @@ body {
 
 footer {
     background-color:#659f8f  ;
-    color: black;
+    color: rgb(39, 38, 38);
     padding: 40px 20px;
     margin-bottom: 10px;
     font-family: sans-serif;
@@ -34,18 +34,18 @@ footer {
 }
 
 .footer-news input {
-    padding: 8px;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     flex: 1 1 200px;
 }
 
 .footer-news button {
-    padding: 8px 16px;
+    padding: 10px 18px;
     background-color: #d86943;
     border: none;
     color: white;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
 }
 /*--NEED TO ADD A HOVER TOO?--*/
@@ -56,8 +56,8 @@ footer {
 .footer-links,
 .footer-tech {
     display: flex;
-    justify-content: space-evenly;
-    padding: 80px 200px;
+    justify-content: space-between;
+    align-content: center;
 }
 
 .footer-links ul,
@@ -68,7 +68,7 @@ footer {
 
 .footer-links h4,
 .footer-tech h4 {
-    font-weight: 600;
+    font-weight: 545;
     font-size: 17px;
     margin-bottom: 12px;
 }
@@ -81,13 +81,13 @@ footer {
 .footer-links a,
 .footer-tech a {
     text-decoration: none;
-    color: blue;
+    color: rgb(39, 38, 38);
 }
 
 .footer-links a:hover,
 .footer-tech a:hover {
     text-decoration: none;
-    color: blue;
+    color: #995037;
 }
 
 .footer hr {          /*--it won't change colour--*/
@@ -103,3 +103,5 @@ footer {
     text-align: center;
     width: 7%;
 }
+
+/*--
