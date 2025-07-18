@@ -5,87 +5,88 @@
 }
 *,*::before,
 ::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
  
 body {
+    padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
-    display: grid;
-    font-size: ;
+    display:flex;
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
     background-color:#659f8f  ;
     color: rgb(39, 38, 38);
-    padding: 40px 20px;
-    margin-bottom: 10px;
-    font-family: sans-serif;
+    padding: 40px;
 }
 
 .footer-news p {
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .form {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .footer-news input {
     padding: 10px;
     border: none;
-    border-radius: 6px;
-    flex: 1 1 200px;
+    border-radius: 4px;
+    width: 180px;
+    max-width: 60%;
+    font-size: 0.9rem;
 }
 
 .footer-news button {
-    padding: 10px 18px;
+    padding: 10px 15px;
     background-color: #d86943;
     border: none;
     color: white;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
 }
+
+
 /*--NEED TO ADD A HOVER TOO?--*/
 .footer-news button:active {
     box-shadow: 0 0 5px blue;
 }
 
-.footer-links,
-.footer-tech {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+.link-column {
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-row: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: center;
 }
 
-.footer-links ul,
-.footer-tech ul {
+.link-column h4{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.link-column ul {
     list-style: none;
-    padding: 0;
 }
 
-.footer-links h4,
-.footer-tech h4 {
-    font-weight: 545;
-    font-size: 17px;
-    margin-bottom: 12px;
-}
-
-.footer-links li,
-.footer-tech li {
+.link-column li {
     margin-bottom: 8px;
+    font-size: 14px;
 }
 
-.footer-links a,
-.footer-tech a {
-    text-decoration: none;
-    color: rgb(39, 38, 38);
+.link-column a {
+    text-decoration: none; 
+    color:  rgb(39, 38, 38);
 }
 
-.footer-links a:hover,
-.footer-tech a:hover {
+.link-column a:hover {
     text-decoration: none;
     color: #995037;
 }
@@ -95,13 +96,50 @@ footer {
     height: 2px;
     background-color: #d86943;
     color: #d86943;
-    margin: 20px 0;
+    margin: 20px 0px;
     opacity: 0.8;
 }
 
 .footer-logo {
     text-align: center;
-    width: 7%;
+    margin-top: 20px;
+    max-width: 150px;
 }
 
-/*--
+
+/*--MEDIA QUERIES--*/
+/*--iPAD MINI-768PX--*/
+@media (max-width: 768px) {
+     footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .link-column ul {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-news input {
+        width: 100%;
+    }
+}
+
+/*--iPHONE SE--375px*/
+@media (max-width: 375px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-news input {
+       width: 100%;
+       margin-bottom: 10px;
+       border-radius: 4px;
+    }
+
+    .footer-news button {
+        width: 100%;
+        border-radius: 4px;
+    }
+}
