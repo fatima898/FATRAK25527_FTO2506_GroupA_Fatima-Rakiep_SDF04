@@ -1,40 +1,35 @@
 /* BASE STYLING */
-
-:root {
-    font-size: 12x;
-}
-*,*::before,
-::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- 
 body {
     padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
-    display:flex;
+    font-family: system-ui, sans-serif;
 }
 
-section {
-    padding: 80px 13% 17px;
+.footer-container{
+    display: flex;
+    background-color: #659f8f;
+    color: rgb(39, 38, 38);
+    margin-bottom: 200px;
+    padding: 5rem 5rem;
 }
 
 .footer {
-    display: flex;
-    background-color:#659f8f  ;
-    color: rgb(39, 38, 38);
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-template-columns: 2fr;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .footer-news p {
-    font-size: 16px;
+    font-size: 20px;
     text-align: left;
     line-height: 30px;
     margin-bottom: 10px;
 }
 
-.form {
+.form {             /*--not usre what this does--*/
   margin-top: 10px;
 }
 
@@ -42,12 +37,14 @@ section {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    width: 180px;
+    width: 200px;
     max-width: 60%;
     font-size: 0.9rem;
 }
 
 .footer-news button {
+    width: 30%;
+    margin-left: 15px;
     padding: 10px 15px;
     background-color: #d86943;
     border: none;
@@ -56,23 +53,24 @@ section {
     cursor: pointer;
 }
 
-
-/*--NEED TO ADD A HOVER TOO?--*/
+.footer-news button:hover {
+    cursor: pointer;
+    background-color: gray;
+}
 .footer-news button:active {
     box-shadow: 0 0 5px blue;
 }
 
 .link-column {
-    display: grid;
-    grid-template-columns: 20% 20% 20%;
-    grid-row: auto;
+    display: flex;
+    padding-top: 60px;
     padding-left: 50px;
     padding-right: 50px;
     justify-content: center;
 }
 
-.link-column h4{
-    font-size: 16px;
+.link-column ul h4{
+    font-weight: lighter;
     margin-bottom: 1.5rem;
 }
 
@@ -81,17 +79,16 @@ section {
 }
 
 .link-column li {
+    line-height: 30px;
     margin-bottom: 12
     font-size: 14px;
 }
 
 .link-column a {
-    display: block;
+    display: flex;
     text-decoration: none; 
     color:  rgb(39, 38, 38);
-    font-size: 15px;
-    font-weight: 400;
-    transition: all .40s ease;
+   
 }
 
 .link-column a:hover {
@@ -99,7 +96,7 @@ section {
     color: #995037;
 }
 
-.footer hr {          /*--it won't change colour--*/
+.footer hr {          /*--was working at first, try something else!--*/
     border: none;
     height: 2px;
     background-color: #d86943;
@@ -108,47 +105,49 @@ section {
     opacity: 0.8;
 }
 
-.footer-logo {
+.logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     text-align: center;
-    margin-top: 200px;
-    max-width: 150px;
-   
+    width: 10%;
+    height: 30%;
 }
 
-
-/*--MEDIA QUERIES--*/
-/*--iPAD MINI-768PX--*/
-@media (max-width: 768px) {
-     footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .link-column ul {
-        margin-left: 20px;
-        margin-bottom: 20px;
-    }
-
-    .footer-news input {
-        width: 100%;
-    }
-}
-
-/*--iPHONE SE--375px*/
-@media (max-width: 375px) {
+/*--media queries--grasped the concept,struggling to execute--*/
+/*--laptop--*/
+@media (max-width: 1200px) {
     .footer {
-        flex-direction: column;
-        align-items: flex-start;
+        height: 50vh;
     }
-
     .footer-news input {
-       width: 100%;
-       margin-bottom: 10px;
-       border-radius: 4px;
-    }
-
-    .footer-news button {
-        width: 100%;
-        border-radius: 4px;
+        margin-top: 4rem;
     }
 }
+/*--ipad--*/
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 2rem;
+    }
+    .link-column {
+        width: 250px;
+        height: 350px;
+    }
+
+}
+/*--iphone se--*/
+@media (max-width: 375px) {
+    .footer-container {
+        width: fixed;
+    }
+    .footer-news input {
+        margin-top: 2rem;
+    }
+    .footer-news btton {
+        width: 100%;
+    }
+    .link-column {
+        flex-direction: column;
+    }
+}
+
